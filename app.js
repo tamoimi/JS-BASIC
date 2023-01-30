@@ -69,26 +69,27 @@ h1.addEventListener("click", handleTitleClick);*/
 // javascript-casino
 // =============================================================================
 
-const casinoForm = document.querySelector("#casino-form")
-const setNum = document.querySelector("h4 input")
-const userNum = document.querySelector("#userNum")
-const machineNum = document.querySelector("#machineNum")
-const userInputNum = document.querySelector("#userInputNum")
-const comNum = document.querySelector("#comNum")
-const result = document.querySelector("#result")
+const casinoForm = document.querySelector("#casino-form");
+const setNum = document.querySelector("h4 input");
+const userNum = document.querySelector("#userNum");
+const machineNum = document.querySelector("#machineNum");
+const userInputNum = document.querySelector("#userInputNum");
+const comNum = document.querySelector("#comNum");
+const result = document.querySelector("#result");
 
-function onPlay (event){
-  event.preventDefault()
-  userNum.innerText =`You chose: ${userInputNum.value},`
-  machineNum.innerText =`the machine chose: ${comNum.value}`
+function onPlay(event) {
+  event.preventDefault();
+  userNum.innerText = `You chose: ${userInputNum.value},`;
+  machineNum.innerText = `the machine chose: ${comNum.value}`;
+  resultText();
 }
 
-function resultText (){
-  if(userNum > comNum) {
-    result.innerText("You won!")
-  }else{
-    result.innerText("You lost!")
+function resultText() {
+  if (userNum > comNum) {
+    result.innerText = "You won!";
+  } else {
+    result.innerText = "You lost!";
   }
 }
 
-casinoForm.addEventListener("submit", onPlay)
+casinoForm.addEventListener("submit", onPlay);
