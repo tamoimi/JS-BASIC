@@ -1,14 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>javascript-tami</title>
-    <link rel="stylesheet" href="/index.css">
-</head>
-<body>
-    <h1 id="title" class="text">Click me!</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Momentum App-tami</title>
+    <link rel="stylesheet" href="/index.css" />
+  </head>
+  <body>
+    <!-- <form id="login-form" class="hidden">
+      <input
+        type="text"
+        required
+        maxlength="15"
+        placeholder="what is your name?"
+      />
+      <button>Log In</button>
+    </form>
+    <h1 id="greeting" class="hidden"></h1> -->
+
+    <h1>Random Number Game</h1>
+    <form id="casino-form">
+    <h4>Generate a number between 0 and <input type="number" min="0" id="comNum"/></h4>
+
+    <div>
+      <span>Guess the number:</span>
+      <input type="number" id="userInputNum" /> <button>play</button>
+    </div>
+
+    <div>
+        <span id="userNum"></span>
+        <span id="machineNum"></span>
+    </div>
+
+    <span id="result"></span>
+</form>
+
+
+
     <script src="/app.js"></script>
-</body>
+  </body>
 </html>

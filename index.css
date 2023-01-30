@@ -10,3 +10,8 @@ h1 {
 .text {
     text-decoration: underline;
 }
+/* -------------------------------------------------*/
+
+.hidden {
+  display: none;
+}
