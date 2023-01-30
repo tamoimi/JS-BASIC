@@ -1,0 +1,12 @@
+body {
+  background-color: azure;
+}
+h1 {
+  color: cornflowerblue;
+}
+.clicked {
+  color: tomato;
+}
+.text {
+    text-decoration: underline;
+}
