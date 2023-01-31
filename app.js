@@ -70,26 +70,34 @@ h1.addEventListener("click", handleTitleClick);*/
 // =============================================================================
 
 const casinoForm = document.querySelector("#casino-form");
-const setNum = document.querySelector("h4 input");
-const userNum = document.querySelector("#userNum");
-const machineNum = document.querySelector("#machineNum");
+
+const comInputNum = document.querySelector("#comInputNum");
 const userInputNum = document.querySelector("#userInputNum");
-const comNum = document.querySelector("#comNum");
+
+const userResult = document.querySelector("#userResult");
+const machineResult = document.querySelector("#machineResult");
+
 const result = document.querySelector("#result");
 
-function onPlay(event) {
-  event.preventDefault();
-  userNum.innerText = `You chose: ${userInputNum.value},`;
-  machineNum.innerText = `the machine chose: ${comNum.value}`;
-  resultText();
-}
+function onClickPlay(event) {
+  const machineResultValue =
+    Math.floor(Math.random(comInputNum.value) * userInputNum.value)+1;
 
-function resultText() {
-  if (userNum > comNum) {
+  event.preventDefault();
+  userResult.innerText = `You chose: ${userInputNum.value},`;
+  machineResult.innerText = `The machine chose: ${machineResultValue}`;
+
+  console.log("userInputNum", userInputNum.value);
+  console.log("machineResultValue", machineResultValue);
+
+  if (parseInt(userInputNum.value) === machineResultValue) {
     result.innerText = "You won!";
+    result.style.color ="red"
   } else {
     result.innerText = "You lost!";
+    result.style.color ="black"
   }
 }
 
-casinoForm.addEventListener("submit", onPlay);
+
+casinoForm.addEventListener("submit", onClickPlay);

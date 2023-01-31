@@ -21,22 +21,30 @@
 
     <h1>Random Number Game</h1>
     <form id="casino-form">
-    <h4>Generate a number between 0 and <input type="number" min="0" id="comNum"/></h4>
+      <h4>
+        Generate a number between 0 and
+        <input type="number" min="1" id="comInputNum" required />
+      </h4>
 
-    <div>
-      <span>Guess the number:</span>
-      <input type="number" id="userInputNum" /> <button>play</button>
-    </div>
+      <div>
+        <span>Guess the number:</span>
+        <input
+          type="number"
+          id="userInputNum"
+          required
+          min="0"
+          max="50"
+        />
+        <button>play</button>
+      </div>
 
-    <div>
-        <span id="userNum"></span>
-        <span id="machineNum"></span>
-    </div>
+      <div>
+        <span id="userResult"></span>
+        <span id="machineResult"></span>
+      </div>
 
-    <span id="result"></span>
-</form>
-
-
+      <h4 id="result"></h4>
+    </form>
 
     <script src="/app.js"></script>
   </body>
