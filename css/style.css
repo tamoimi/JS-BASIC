@@ -1,4 +1,4 @@
-body {
+/* body {
   background-color: azure;
 }
 h1 {
@@ -10,8 +10,16 @@ h1 {
 .text {
     text-decoration: underline;
 }
-/* -------------------------------------------------*/
-
 .hidden {
   display: none;
+} */
+
+.SScreen {
+  background-color: deeppink;
+}
+.MScreen {
+  background-color: dimgray;
+}
+.LScreen {
+  background-color: dodgerblue;
 }

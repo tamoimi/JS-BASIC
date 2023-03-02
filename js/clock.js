@@ -14,19 +14,34 @@ getClock();
 setInterval(getClock, 1000);*/
 
 //크리스마스 디데이
-const dDay = document.querySelector("#dDay");
+// const dDay = document.querySelector("#dDay");
 
-function getDDay() {
-  const date = new Date();
-  const christmas = new Date("2023-12-25");
-  const gap = christmas - date;
+// function getDDay() {
+//   const date = new Date();
+//   const christmas = new Date("2023-12-25");
+//   const gap = christmas - date;
 
-  const day = Math.floor(gap / (1000 * 60 * 60 * 24));
-  const hours = String(Math.floor((gap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, "0");
-  const min = String(Math.floor((gap % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, "0");
-  const sec = String(Math.floor((gap % (1000 * 60)) / 1000)).padStart(2, "0");
+//   const day = Math.floor(gap / (1000 * 60 * 60 * 24));
+//   const hours = String(Math.floor((gap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, "0");
+//   const min = String(Math.floor((gap % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, "0");
+//   const sec = String(Math.floor((gap % (1000 * 60)) / 1000)).padStart(2, "0");
 
-  dDay.innerText = `${day}d ${hours}h ${min}m ${sec}s `;
+//   dDay.innerText = `${day}d ${hours}h ${min}m ${sec}s `;
+// }
+// getDDay();
+// setInterval(getDDay, 1000);
+
+const button = document.querySelector("#button");
+
+// function pushButton () {
+//   setTimeout(()=> )
+// }
+
+//5 refresh
+
+
+function pushButton() {
+  window.event.key === 13;
 }
-getDDay();
-setInterval(getDDay, 1000);
+button.addEventListener('keyup', event => pushButton)
+setInterval(pushButton, 1000);
